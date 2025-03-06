@@ -1,4 +1,4 @@
-# 🖥️ For School 21 students who love Windows too much 💔
+# 🖥️For School 21 students who love Windows too much💔
 
 This tool helps Windows users run their C programs using a Docker Linux container.
 
