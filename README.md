@@ -64,6 +64,8 @@ This Docker project helps you write code in any Windows IDE and synchronize your
 
 Now, to start working, just start your Docker container and you're good to go.
 
+You can now also clone your GitLab projects directly inside the Docker container using SSH, and work with them using your Windows IDE in real time. This allows seamless development and version control integration across platforms.
+
 > ⚠️ Sometimes, if you add files from the Windows side, you may need to manually reset ownership and permissions inside the container:
 
 ```sh
