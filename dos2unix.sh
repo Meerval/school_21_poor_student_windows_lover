@@ -1,0 +1,1 @@
+find "$(pwd)" -type f -exec dos2unix -q {} +
