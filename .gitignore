@@ -1,0 +1,13 @@
+.idea/
+
+.ssh/**
+review/**
+projects/**
+
+!.ssh/
+!review/
+!projects/
+
+!.ssh/.gitkeep
+!review/.gitkeep
+!projects/.gitkeep
