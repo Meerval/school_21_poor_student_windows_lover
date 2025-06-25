@@ -39,3 +39,6 @@ fi
 chmod 600 "$KEY_TARGET"
 chmod 644 "$KEY_TARGET_PUB"
 chown ashaclem:ashaclem "$KEY_TARGET" "$KEY_TARGET_PUB"
+
+git config --global user.name ashaclem
+git config --global user.email ashaclem@student.21-school.ru
