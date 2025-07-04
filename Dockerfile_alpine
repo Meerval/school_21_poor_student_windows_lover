@@ -1,0 +1,21 @@
+FROM alpine:latest
+
+RUN apk update && apk add --no-cache \
+    build-base \
+    gdb \
+    vim \
+    git \
+    cmake \
+    mandoc \
+    curl \
+    sudo \
+    shadow \
+    bash
+
+RUN useradd -m -s /bin/bash ashaclem \
+    && echo "ashaclem ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ashaclem
+
+USER ashaclem
+WORKDIR /home/ashaclem/s21
+
+CMD ["/bin/bash"]
