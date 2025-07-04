@@ -84,7 +84,7 @@ You can now also clone your GitLab projects directly inside the Docker container
 >   - This happens because Windows and Linux have different file system behaviors and Git settings.
 > ### 🔧 How to Fix It
 > 1. Git Settings on Windows (Host)
-> Open Git Bash or CLion terminal and run:
+> Open Git Bash or CLion terminal, go to your **git repository** and run:
 > ```sh
 > git config core.filemode false       # Ignore permission changes
 > git config core.autocrlf input       # Convert CRLF to LF on commit
@@ -94,14 +94,7 @@ You can now also clone your GitLab projects directly inside the Docker container
 > git reset --hard                     # Discard local changes caused by permission or line ending diffs
 > git commit -m "Normalize file modes and line endings for Windows/Linux consistency"
 > ```
-> 2. Git Settings Inside the Docker Container
-> ```sh
-> git config --global core.filemode false
-> git config --global core.autocrlf input
-> git config --global core.symlinks false
-> git config --global core.safecrlf true
-> ```
-> 3. Create a Simple .gitattributes via Bash (To enforce consistent line endings for all files, create a .gitattributes file in your repo root):
+> 2*. Create a Simple .gitattributes via Bash Inside the Docker Container (*Optional! To enforce consistent line endings for all files, create a .gitattributes file in your repo root):
 > ```sh
 > echo "* text=auto eol=lf" > .gitattributes
 > git add .gitattributes
